@@ -1,0 +1,20 @@
+<?xml version="1.0"?> <!--
+/**
+ * local.xml
+ *
+ * Local layout modifications for our local theme
+ *
+ * @category    design
+ * @package     my_theme_default
+ * @copyright   Copyright (coffee) 2013 Magento.
+ */
+-->
+<layout version="0.1.0">
+	<default> 
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/header.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_css</type><name>css/footer.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_css</type><name>css/general.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>
+	</default>
+</layout>
