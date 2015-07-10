@@ -28,10 +28,10 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Tue, 07 Jul 2015 11:53:07 +0000]]></date>
+            <date><![CDATA[Fri, 10 Jul 2015 01:14:35 +0000]]></date>
         </install>
         <crypt>
-            <key><![CDATA[fa4ef8ce6c417461e7b6091413f697bb]]></key>
+            <key><![CDATA[bbcde7fafadec04ec5eb71dd72c5533d]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
@@ -42,7 +42,7 @@
                 <connection>
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[root]]></username>
-                    <password><![CDATA[password123]]></password>
+                    <password><![CDATA[password]]></password>
                     <dbname><![CDATA[tesisecommerce]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
