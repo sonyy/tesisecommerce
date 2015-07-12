@@ -13,8 +13,21 @@
 	<default> 
 		<reference name="head">
 			<action method="addItem"><type>skin_css</type><name>css/header.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_css</type><name>css/megamenu.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_css</type><name>css/owl.carousel.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
 			<action method="addItem"><type>skin_css</type><name>css/footer.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
 			<action method="addItem"><type>skin_css</type><name>css/general.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_js</type><name>js/owl.carousel.js</name></action>
 		</reference>
 	</default>
+	<cms_index_index>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/homepage.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>
+	</cms_index_index>
+	<catalog_category_view>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/category.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>
+	</catalog_category_view>
 </layout>

@@ -1,3 +1,6 @@
 .clear{
     clear:both;
 }
+#header-nav {display: none;}
+.breadcrumbs{float: right;}
+.main-container, .footer{max-width: 1024px;}
