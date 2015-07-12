@@ -19,6 +19,16 @@
 			<action method="addItem"><type>skin_css</type><name>css/general.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
 			<action method="addItem"><type>skin_js</type><name>js/owl.carousel.js</name></action>
 		</reference>
+		<reference name="footer">
+			<action method="unsetChild"><name>cms_footer_links</name></action>
+			<action method="unsetChild"><name>footer_links</name></action>
+			<action method="unsetChild"><name>footer_links2</name></action>
+			<action method="unsetChild"><name>cms_footer_links_sm</name></action>
+			<action method="unsetChild"><name>newsletter</name></action>
+			<block type="cms/block" name="footer_tesis" after="-">
+				<action method="setBlockId"><block_id>footer_tesis</block_id></action>
+			</block>
+		</reference>
 	</default>
 	<cms_index_index>
 		<reference name="head">

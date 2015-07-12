@@ -4,3 +4,10 @@
 #header-nav {display: none;}
 .breadcrumbs{float: right;}
 .main-container, .footer{max-width: 1024px;}
+body .saving{
+	padding: 5px 20px 5px 20px;
+	border: 1px solid black;
+	position: fixed;
+	bottom: 1%;
+	right: 5%;
+}

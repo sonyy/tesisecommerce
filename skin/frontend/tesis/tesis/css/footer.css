@@ -1,0 +1,35 @@
+.footer{
+	margin:0 auto;
+	border-top: 1px solid rgb(0, 175, 255);
+}
+.footer div div.text{
+	display: block;
+	width: 300px;
+	margin-left: 20px;
+	margin-bottom: 40px;
+	float: left;
+}
+.footer div div.text-icon{display: inline-block;}
+.footer div div.text-icon span{float: left;}
+.footer div div.text-icon div{
+	float: left;
+	position: relative;
+	top: -12px;
+	margin-left: 10px;
+}
+.footer div div.visa{
+	background-image: url(../images/visa.jpg);
+	background-size: 66px;
+	background-repeat: no-repeat;
+	height: 40px !important;
+	width: 65px;
+	margin-right: 4px;
+}
+.footer div div.master{
+	background-image: url(../images/master.png);
+	background-size: 66px;
+	background-repeat: no-repeat;
+	height: 40px !important;
+	width: 65px;
+	margin-right: 4px;
+}
