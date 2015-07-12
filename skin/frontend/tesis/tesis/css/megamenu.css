@@ -1,0 +1,128 @@
+/* megamenu.css */
+
+.nav-primary a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header-nav .nav-primary {
+    background: #ffffff;
+    position: absolute;
+	  top: 79px;
+	  left: 0px;
+	  margin-top: 0;
+	  width: 22%;
+    z-index: 1;
+    
+    -webkit-box-shadow: 0px 10px 29px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 29px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 29px 0px rgba(0,0,0,0.75);
+    border-bottom-width: 10px;
+    border-bottom-color: #e4b32a;
+}
+.nav-primary .menu-active, .nav-primary li.level0:hover { z-index: 101;}
+.nav-primary li.level0.megamenu-label, 
+.nav-primary li.level0 a {
+	border-right: 1px solid white;
+}
+.nav-primary li.level0.last a {
+	border-right: 0;
+}
+.nav-primary li.level0.megamenu-label, 
+.nav-primary li.level0 > a {
+	color: #000000;
+	text-transform: none;
+	font-weight: bold;
+}
+.nav-primary li.level0 > a { width: 100%;}
+.nav-primary li.level0 a.has-children:hover {
+    background: url(../images/arrow-homepage-megamenu.png) no-repeat right center;
+}
+.nav-primary li.level0.megamenu-label, 
+.nav-primary a.level0 {
+	padding: 0 18px;
+}
+.nav-primary li.level0.megamenu-label {
+	padding: 3px 20px;
+}
+.nav-primary li.level0 ul {
+	background: white;
+	width: 430px;
+	top: 0;
+	left: 228px;
+}
+.nav-primary li.level0 ul.level0 {
+	-webkit-box-shadow: 0px 10px 29px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 29px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 29px 0px rgba(0,0,0,0.75);
+	border-left-width: 10px;
+	border-left-color: #e4b32a;
+}
+.nav-primary li.level0 > ul {
+	font-weight: bold;
+}
+.nav-primary li.level0 ul ul {
+	position: initial;
+	display: block;
+	width: 100%;
+	border: 0;
+	font-weight: normal;
+	padding-right: 0;
+	padding-left: 0;
+}
+.nav-primary li:hover a.level0 {
+	color: #ebb716;
+}
+.nav-primary li.level0 li.parent > a:after {
+	display: none;
+}
+.nav-primary li.level0 > ul a {
+	color: black;
+}
+.nav-primary li.level1 a { border-bottom: 0;}
+.nav-primary li.level2 a { border-bottom: 1px solid #cccccc;}
+.nav-primary li.level0 > ul a:hover { color: #ff0000;}
+.megamenu-arrow {
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -10px;
+	height: 11px;
+	width: 20px;
+	background: url(../images/arrow-megamenu.png) no-repeat center center;
+}
+.nav-primary li.level0:hover .megamenu-arrow {
+	display: block;
+}
+
+/* category megamenu */
+.nav-primary li.level0 { 
+    display: block;
+    position: initial;
+}
+#header-nav #nav .nav-primary { display: none;}
+.catalog-category-view #header-nav #nav:hover .nav-primary { display: block;}
+.megamenu-bg-overlay {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear .1s,opacity .1s linear;
+    -moz-transition: visibility 0s linear .1s,opacity .1s linear;
+    -o-transition: visibility 0s linear .1s,opacity .1s linear;
+    transition: visibility 0s linear .1s,opacity .1s linear;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    z-index: 155;
+    pointer-events: none;
+}
+#header-nav #nav:hover .megamenu-bg-overlay {
+    visibility: hidden;
+    /*visibility: visible;*/
+    opacity: .5;
+    -webkit-transition-delay: 0s;
+    -moz-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s
+}
