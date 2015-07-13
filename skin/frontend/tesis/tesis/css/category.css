@@ -1,8 +1,44 @@
 /* header homepage */
+.col-left-first{display: none;}
 
-#header-nav {
-	display: block;
-	width: 256px;
-	clear: both;
-	border:0px;
+/*navigation*/
+
+.col-left.sidebar{
+	width: 185px;
+	background-color: red;
+	padding-right: 0px;
 }
+.col-left.sidebar h4{  
+	text-align: center;
+  	padding-top: 5px;
+}
+.col-left.sidebar h4 span{  
+	background-color: white;
+	padding: 3px;
+	border: 1px solid black;
+}
+.col-left.sidebar li{
+	text-align: center;
+	position: relative;
+	left: -7px;
+	margin-bottom: 10px;
+}
+.category-nav-primary li a{color: white;}
+.category-nav-primary li a:hover{text-decoration: none;}
+.category-nav-primary li:hover span,
+.category-nav-primary li .current span{
+	background-color: white;
+	color: black;
+	padding: 3px;
+	border: 1px solid black;
+}
+
+/*main*/
+.col-main{width: 81%;}
+.col-main .item .actions,
+.col-main .view-mode{display: none;}
+.pager{
+	float: left;
+	margin-right: 20px;
+}
+.sorter > .sort-by .sort-by-switcher{  background-image: url(../images/icon_sprite.png);}

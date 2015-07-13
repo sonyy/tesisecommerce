@@ -114,43 +114,6 @@ body.cms-home .main-container { padding-top: 0;}
 	padding: 3px;
 	border: 1px solid black;
 }
-.homepage-nav-primary li.level0 ul.level0 {
-	display: none;
-	position: absolute;
-	top: -50px;
-	left: 190px;
-	width: 450px;
-	padding: 20px;
-	
-	border: solid 1px #cccccc;
-	border-left-width: 10px;
-	border-left-color: #d7ac29;
-	
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	
-	-webkit-box-shadow: 4px 1px 33px -2px rgba(0,0,0,0.75);
-	-moz-box-shadow: 4px 1px 33px -2px rgba(0,0,0,0.75);
-	box-shadow: 4px 1px 33px -2px rgba(0,0,0,0.75);
-}
-.homepage-nav-primary li.level0:hover ul.level0 {
-	display: block;
-	background: white;
-	z-index: 99;
-}
-.homepage-nav-primary li.level0 li.level1 a {
-	font-weight: bold;
-}
-.homepage-nav-primary li.level0 li.level2 a {
-	font-weight: normal;
-}
-.homepage-nav-primary li.level2 {
-	border-bottom: 1px solid #e0e0e0;
-}
-.homepage-nav-primary li.level2 a {
-	font-weight: normal;
-}
 
 /* homepage middle */
 
