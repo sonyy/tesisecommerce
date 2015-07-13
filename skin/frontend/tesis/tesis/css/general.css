@@ -2,7 +2,7 @@
     clear:both;
 }
 #header-nav {display: none;}
-.breadcrumbs{float: right;}
+.breadcrumbs{display: none;}
 .main-container, .footer{max-width: 1024px;}
 body .saving{
 	padding: 5px 20px 5px 20px;
@@ -11,3 +11,4 @@ body .saving{
 	bottom: 1%;
 	right: 5%;
 }
+.price-box .price, .price{color: black;}
