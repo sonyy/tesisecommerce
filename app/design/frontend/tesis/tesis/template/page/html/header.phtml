@@ -74,7 +74,8 @@
                 <?php if($this->helper('customer')->isLoggedIn()) : ?>
                         <?php echo $this->__('Hello, '); ?>
                         <span>
-                            <?php 
+                            <?php
+                                $session = Mage::getSingleton('customer/session');
                                     if($session->isLoggedIn()) {
                                        $customer = $session->getCustomer();
                                        echo $customer->getFirstname();
