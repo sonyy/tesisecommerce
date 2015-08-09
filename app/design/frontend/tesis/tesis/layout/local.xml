@@ -29,12 +29,24 @@
 				<action method="setBlockId"><block_id>footer_tesis</block_id></action>
 			</block>
 		</reference>
+
+        <default>
+            <reference name="right">
+                <remove name="catalog.compare.sidebar"/>
+                <remove name="right.poll"/>
+            </reference>
+        </default>
 	</default>
 	<cms_index_index>
 		<reference name="head">
 			<action method="addItem"><type>skin_css</type><name>css/homepage.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
 		</reference>
 	</cms_index_index>
+    <catalogsearch_result_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+    </catalogsearch_result_index>
 	<catalog_category_view>
 		<reference name="root">
 			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
@@ -48,4 +60,31 @@
 			<action method="addItem"><type>skin_css</type><name>css/category.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
 		</reference>
 	</catalog_category_view>
+    <checkout_cart_index>
+        <reference name="checkout.cart">
+            <remove name="checkout.cart.coupon"/>
+            <remove name="checkout.cart.shipping"/>
+            <reference name="checkout.cart.methods">
+                <remove name="checkout.cart.methods.multishipping"/>
+            </reference>
+        </reference>
+    </checkout_cart_index>
+    <customer_account>
+        <reference name="left">
+            <remove name="catalog.compare.sidebar"/>
+            <remove name="sale.reorder.sidebar"/>
+        </reference>
+        <reference name="my.account.wrapper">
+            <reference name="customer_account_dashboard">
+                <remove name="customer_account_dashboard_hello"/>
+            </reference>
+        </reference>
+    </customer_account>
+    <catalog_product_view>
+        <reference name="content">
+            <reference name="product.info">
+                <remove name="product.info.sharing"/>
+            </reference>
+        </reference>
+    </catalog_product_view>
 </layout>

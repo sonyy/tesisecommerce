@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Tesis_Dataupdate>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Tesis_Dataupdate>
+    </modules>
+</config>
