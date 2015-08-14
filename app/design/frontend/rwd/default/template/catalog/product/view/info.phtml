@@ -1,0 +1,7 @@
+<?php $_description = nl2br($this->getProduct()->getShortDescription()); ?>
+<?php if ($_description): ?>
+    <h2><?php echo $this->__('Short Details') ?></h2>
+    <div class="std">
+        <?php echo $this->helper('catalog/output')->productAttribute($this->getProduct(), $_description, 'short_description') ?>
+    </div>
+<?php endif; ?>

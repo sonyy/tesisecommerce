@@ -1,7 +1,30 @@
 <?php
-//{{block type="catalog/product_list" category_id="3" num_products="8" column_count="5" template="showcustomproducts/all.phtml"}}
-$_productCollection=$this->getLoadedProductCollection();
-$ids = $_productCollection->getColumnValues('entity_id'); shuffle($ids);
+//{{block type="catalog/product_list" category_id="21" num_products="30" column_count="6" is_shuffle="1" template="showcustomproducts/all.phtml"}}
+$visibility = array(
+    Mage_Catalog_Model_Product_Visibility::VISIBILITY_BOTH,
+    Mage_Catalog_Model_Product_Visibility::VISIBILITY_IN_CATALOG
+);
+$_productCollection = Mage::getModel('catalog/product')->getCollection()->addAttributeToFilter('visibility', $visibility);
+$catId = $this->getData('category_id');
+if(!is_null($catId)){
+    $_productCollection = $_productCollection
+        ->joinField(
+            'category_id', 'catalog/category_product', 'category_id',
+            'product_id = entity_id', null, 'left'
+        )
+        ->addAttributeToSelect('*')
+        ->addAttributeToFilter('category_id', array(
+            array('finset' => $catId),
+        ));
+}
+$ids = $_productCollection->getColumnValues('entity_id');
+
+$isShuffle = $this->getData('is_shuffle');
+if(!is_null($isShuffle) && $isShuffle=='1'){
+    shuffle($ids);
+}
+$numOfProd = $this->getData('num_products');
+$ids = array_slice($ids,0,$numOfProd);
 $_helper = $this->helper('catalog/output');
 ?>
 <?php if(!$_productCollection->count()): ?>

@@ -84,6 +84,10 @@
         <reference name="content">
             <reference name="product.info">
                 <remove name="product.info.sharing"/>
+                <!--<block type="catalog/product_view_attributes" name="product.attributes" as="additional" template="catalog/product/view/info.phtml">-->
+                    <!--<action method="addToParentGroup"><group>detailed_info</group></action>-->
+                    <!--<action method="setTitle" translate="value"><value>Additional Information</value></action>-->
+                <!--</block>-->
             </reference>
         </reference>
     </catalog_product_view>
