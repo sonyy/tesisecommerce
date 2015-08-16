@@ -1,0 +1,147 @@
+<?php
+/**
+ * Magento Enterprise Edition
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Magento Enterprise Edition License
+ * that is bundled with this package in the file LICENSE_EE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.magentocommerce.com/license/enterprise-edition
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     rwd_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://www.magentocommerce.com/license/enterprise-edition
+ */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+
+/* @var $this Mage_Catalog_Block_Product_View_Media */
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+
+<?php
+    // Get %disc label
+    $_finalPrice = $this->helper('tax')->getPrice($_product, $_product->getFinalPrice());
+    $_regularPrice = $this->helper('tax')->getPrice($_product, $_product->getPrice());
+    $finalpercentage = 0;
+    if ($_regularPrice != $_finalPrice){
+        $getpercentage = number_format($_finalPrice / $_regularPrice * 100, 0);
+        $finalpercentage = 100 - $getpercentage;
+    }
+?>
+<?php 
+    // Get NEW label
+    $today =  time();
+    $news_from_date_value = $_product->getData('news_from_date');
+    $news_to_date_value   = $_product->getData('news_to_date');
+    $is_new = false;
+    if($news_from_date_value != null){
+        if($today >= strtotime( $news_from_date_value) && $today <= strtotime($news_to_date_value) || $today >= strtotime( $news_from_date_value) && is_null($news_to_date_value)){
+            $is_new = true;
+        }
+    }
+?>
+
+<div class="product-image product-image-zoom">
+    <div class="product-image-gallery">
+        <div class="product-image-overlay"></div>
+        <?php // print % disc label
+        if ($finalpercentage>0): ?>
+            <span class="lbl-sale">
+                <strong><span><?php echo $this->__('%s&#37;',$finalpercentage) ?></span></strong><br>
+            </span>
+        <?php endif ?>
+        <?php if // print New label
+        ($is_new): ?>
+            <span class="lbl-new"><?php echo $this->__('NEW') ?></span>
+        <?php endif ?>
+        <a class="product-image image-zoom" id="main-image" rel='gal1' title="<?php echo $this->escapeHtml($_product->getImageLabel()); ?>" href="<?php echo $this->helper('catalog/image')->init($_product, 'image') ?>" rel="gal1">
+        <img id="image-main"
+             class="gallery-image visible"
+             src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize( 380) ?>"
+             alt="<?php echo $this->escapeHtml($this->getImageLabel()) ?>"
+             title="<?php echo $this->escapeHtml($this->getImageLabel()); ?>"
+             height="500" width="380" /></a>
+        <div class="image-magnifier"></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+    jQuery(document).ready(function() {
+        $j('#main-image').jqzoom({
+            zoomType: 'standart',
+            zoomWidth: 640,
+            zoomHeight: 467,
+            preloadImages: false,
+            alwaysOn:false,
+            title:false
+        });
+        $j('.image-magnifier').click(function(){
+            $j('.product-image-overlay').hide();
+        });
+        $j('.zoomPad').mouseleave(function(){
+            $j('.product-image-overlay').show();
+        });
+    });
+//]]>
+</script>
+
+<?php if (count($this->getGalleryImages()) > 0): ?>
+<div class="more-views">
+    <ul class="product-image-thumbs">
+    <?php $indexThumbFirst = true ?>
+    <?php $i=0; foreach ($this->getGalleryImages() as $_image): ?>
+        <?php
+        if (($filterClass = $this->getGalleryFilterHelper()) && ($filterMethod = $this->getGalleryFilterMethod()) && !Mage::helper($filterClass)->$filterMethod($_product, $_image)):
+            continue;
+        endif;
+        ?>
+        <li>
+            <a class="<?php if($indexThumbFirst):?> zoomThumbActive<?php endif;?>" href="javascript:void(0);" title="<?php echo $this->escapeHtml($_image->getLabel()) ?>" rel="{gallery: 'gal1', smallimage: '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(460) ?>',largeimage: '<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize(1024) ?>'}">
+                <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75); ?>"
+                     width="75" height="75" alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" />
+            </a>
+        </li>
+        <?php $indexThumbFirst = false ?>
+    <?php $i++; endforeach; ?>
+    </ul>
+</div>
+
+<script type="text/javascript">// <![CDATA[
+jQuery(document).ready(function(){
+jQuery(".product-image-thumbs").owlCarousel({
+      pagination : false,
+      navigation : true,
+      navigationText : false,
+      items : 3,
+      itemsDesktop : [1000,3],
+      itemsDesktopSmall : [900,3],
+      itemsTablet: [600,2],
+      itemsMobile : [480,2]
+  });
+});
+// ]]></script>
+
+<?php endif; ?>
+
+<?php echo $this->getChildHtml('after'); ?>

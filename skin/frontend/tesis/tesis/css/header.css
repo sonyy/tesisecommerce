@@ -1,10 +1,10 @@
 .not-log-in#header-account{display: none;}
 .skip-links{
 	display: inline-block;
-	background-color: yellow;
+	background-color: transparent;
 	height: auto;
 	width: 819px;
-	padding: 20px;
+	padding: 10px;
 	overflow: visible;
 }
 #header-nav #nav h4{margin-bottom: 0px;}
@@ -24,22 +24,19 @@
 .logo{
 	min-height: 20px;
 	padding: 0px;
+	width: 18%;
+	margin-right: 20px;
+	margin-top: 10px
 }
-.logo .large, .logo .small{width: 100%;}
+.logo .logo-img{width: 100%;}
 .page-header{
 	max-width: 1024px;
 	padding: 0px;
 }
 .page-header-container{
-	padding-top: 10px;
 	min-height: 79px;
 }
 .nav-primary a.level0{padding-left: 0px;}
-.logo-link-container{margin-bottom: 10px;}
-.logo{
-	width: 18%;
-	margin-right: 20px;
-}
 
 
 .account-wrapper{  
@@ -58,13 +55,13 @@
 #search{border-radius: 13px;}
 #search_mini_form .search-button{border-left: 1px solid rgb(189, 189, 189);}
 
-.cart-wrapper{float: left;}
+
 #header-cart.skip-active{  top: 40px;}
 .cart-wrapper{
-	float: left;
+	float: right;
 	position: relative;
 	top: 6px;
-	left: 30px;
+	left: 11px;
 }
 .skip-link{  
 	height: 38px;
@@ -110,8 +107,8 @@
 }
 
 a.skip-link.skip-account{
-	position: relative;
-	left: 55px;
-	top: 6px;
-	text-transform: none;
+    position: relative;
+    top: 6px;
+    text-transform: none;
+    float: right;
 }

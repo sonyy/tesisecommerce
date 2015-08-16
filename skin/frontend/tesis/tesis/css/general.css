@@ -1,9 +1,4 @@
-.clear{
-    clear:both;
-}
-#header-nav {display: none;}
-.breadcrumbs{display: none;}
-.main-container, .footer{max-width: 1024px;}
+body .page{background-color: #C8EEEE;}
 body .saving{
 	padding: 5px 20px 5px 20px;
 	border: 1px solid black;
@@ -11,4 +6,17 @@ body .saving{
 	bottom: 1%;
 	right: 5%;
 }
+.clear{
+    clear:both;
+}
+
+header, .main-container.col1-layout, .footer-container{background-color: rgb(216, 254, 141);}
+
+#header-nav {display: none;}
+.breadcrumbs{display: none;}
+
+
+.main-container, .footer{max-width: 1024px;}
+
+
 .price-box .price, .price{color: black;}
