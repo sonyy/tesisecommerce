@@ -66,12 +66,13 @@
 .skip-link{  
 	height: 38px;
 	background-color: transparent;
+	color:white;
 }
 .skip-link.skip-cart .label{
 	float: left;
 	display: inline-block;
 	text-transform:none;
-	color: black;
+	color: white;
 }
 .skip-cart{width: 150px}
 .skip-cart .icon{  

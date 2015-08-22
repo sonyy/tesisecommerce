@@ -35,6 +35,16 @@
 	margin-right: 4px;
 }
 
+.footer-content li, .footer-content li a {color: white;}
+.footer-content li{font-weight: bold;}
+.footer-content li a{font-weight: normal;}
 .footer-container .footer-subscribe {
 	display: none;
 }
+
+.footer-content{
+	float: left;
+	margin:20px;
+}
+
+.footer address{color: white;}

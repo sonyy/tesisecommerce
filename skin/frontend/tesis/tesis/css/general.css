@@ -9,8 +9,8 @@ body .saving{
 .clear{
     clear:both;
 }
-
-header, .main-container.col1-layout, .footer-container{background-color: rgb(216, 254, 141);}
+.cms-index-index .products-grid .actions{display: block;}
+header, .main-container.col1-layout, .footer-container{background-color: #008800;}
 
 #header-nav {display: none;}
 .breadcrumbs{display: none;}
