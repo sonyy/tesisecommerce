@@ -66,7 +66,7 @@
 			<action method="addItem"><type>skin_css</type><name>css/category.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
 		</reference>
 		<reference name="left">
-		     <block type="core/template" name="catalog.sidenav" template="page/html/menu-category.phtml" before="cart_sidebar"/>
+		     <block type="page/html_topmenu" name="catalog.sidenav" template="page/html/homepage-category.phtml" before="cart_sidebar"/>
 		</reference>
 	</catalog_category_view>
 
