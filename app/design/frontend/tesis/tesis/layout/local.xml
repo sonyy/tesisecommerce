@@ -28,6 +28,12 @@
 			<block type="cms/block" name="footer_tesis" after="-">
 				<action method="setBlockId"><block_id>footer_tesis</block_id></action>
 			</block>
+			<block type="cms/block" name="footer_tesis2" after="footer_tesis">
+				<action method="setBlockId"><block_id>footer_tesis2</block_id></action>
+			</block>
+			<block type="cms/block" name="footer_tesis3" after="footer_tesis2">
+				<action method="setBlockId"><block_id>footer_tesis3</block_id></action>
+			</block>
 		</reference>
 
         <default>
@@ -37,29 +43,46 @@
             </reference>
         </default>
 	</default>
+
 	<cms_index_index>
 		<reference name="head">
 			<action method="addItem"><type>skin_css</type><name>css/homepage.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
 		</reference>
 	</cms_index_index>
+
     <catalogsearch_result_index>
         <reference name="root">
             <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
         </reference>
     </catalogsearch_result_index>
+    
 	<catalog_category_view>
 		<reference name="root">
 			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
 			<!-- Mark root page block that template is applied -->
 			<action method="setIsHandle"><applied>1</applied></action>
 		</reference>
-		<reference name="left">
-		     <block type="core/template" name="catalog.sidenav" template="page/html/menu-category.phtml" before="cart_sidebar"/>
-		</reference>
 		<reference name="head">
 			<action method="addItem"><type>skin_css</type><name>css/category.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
 		</reference>
+		<reference name="left">
+		     <block type="core/template" name="catalog.sidenav" template="page/html/menu-category.phtml" before="cart_sidebar"/>
+		</reference>
 	</catalog_category_view>
+
+	<catalog_product_view>	
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+			<!-- Mark root page block that template is applied -->
+			<action method="setIsHandle"><applied>1</applied></action>
+		</reference>	
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/pdp.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+            <action method="addItem"><type>skin_css</type><name>css/jquery.jqzoom.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>            
+            <action method="addItem"><type>skin_js</type><name>js/jquery.jqzoom-core.js</name></action>
+		</reference>
+	</catalog_product_view>
+
     <checkout_cart_index>
         <reference name="checkout.cart">
             <remove name="checkout.cart.coupon"/>
@@ -69,6 +92,7 @@
             </reference>
         </reference>
     </checkout_cart_index>
+
     <customer_account>
         <reference name="left">
             <remove name="catalog.compare.sidebar"/>
@@ -80,6 +104,7 @@
             </reference>
         </reference>
     </customer_account>
+
     <catalog_product_view>
         <reference name="content">
             <reference name="product.info">
@@ -90,5 +115,8 @@
                 <!--</block>-->
             </reference>
         </reference>
-    </catalog_product_view>
+		<reference name="left">
+		     <block type="core/template" name="catalog.sidenav" template="page/html/menu-category.phtml" before="cart_sidebar"/>
+		</reference>
+	</catalog_product_view>
 </layout>
