@@ -37,47 +37,17 @@
         <div class="count-container">
             <?php if($this->getLastPageNum()>1): ?>
                 <p class="amount amount--has-pages">
-                    <?php echo $this->__('%s-%s of %s', $this->getFirstNum(), $this->getLastNum(), $this->getTotalNum()) ?>
+                    <?php echo $this->__('Menampilkan %s-%s dari %s produk', $this->getFirstNum(), $this->getLastNum(), $this->getTotalNum()) ?>
                 </p>
             <?php else: ?>
                 <p class="amount amount--no-pages">
                     <strong><?php echo $this->__('%s Item', $this->getTotalNum()) ?></strong>
                 </p>
             <?php endif; ?>
-
-            <div class="limiter">
-                <label><?php echo $this->__('Tampilkan') ?></label>
-                <select onchange="setLocation(this.value)" title="<?php echo $this->__('Results per page'); ?>">
-                <?php foreach ($this->getAvailableLimit() as  $_key=>$_limit): ?>
-                    <option value="<?php echo $this->getLimitUrl($_key) ?>"<?php if($this->isLimitCurrent($_key)): ?> selected="selected"<?php endif ?>>
-                        <?php echo $_limit ?>
-                    </option>
-                <?php endforeach; ?>
-                </select>
-            </div>
         </div>
-
-        <?php echo $this->getPagerHtml() ?>
-
     </div>
     <?php if( $this->isExpanded() ): ?>
         <div class="sorter">
-            <?php if( $this->isEnabledViewSwitcher() ): ?>
-                <p class="view-mode">
-                    <?php $_modes = $this->getModes(); ?>
-                    <?php if($_modes && count($_modes)>1): ?>
-                        <label><?php echo $this->__('View as') ?></label>
-                        <?php foreach ($this->getModes() as $_code=>$_label): ?>
-                            <?php if($this->isModeActive($_code)): ?>
-                                <strong title="<?php echo $_label ?>" class="<?php echo strtolower($_code); ?>"><?php echo $_label ?></strong>
-                            <?php else: ?>
-                                <a href="<?php echo $this->getModeUrl($_code) ?>" title="<?php echo $_label ?>" class="<?php echo strtolower($_code); ?>"><?php echo $_label ?></a>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                </p>
-            <?php endif; ?>
-
             <div class="sort-by">
                 <label><?php echo $this->__('Urutkan Berdasarkan') ?></label>
                 <select onchange="setLocation(this.value)" title="<?php echo $this->__('Sort By') ?>">
@@ -95,5 +65,7 @@
             </div>
         </div>
     <?php endif; ?>
+
+    <?php echo $this->getPagerHtml() ?>
 </div>
 <?php endif ?>

@@ -78,7 +78,7 @@
 .col-main .view-mode{display: block;}
 .pager{
 	float: left;
-	margin-right: 20px;
+	margin-right: 100px;;
 }
 .sorter > .sort-by .sort-by-switcher{  background-image: url(../images/icon_sprite.png);}
 
@@ -92,10 +92,17 @@ h3.product-name a,
 h4.product-name a, 
 h5.product-name a, 
 p.product-name a{
-	color: white;
+	color: black;
 }
 h2.product-name a:hover, 
 h3.product-name a:hover, 
 h4.product-name a:hover, 
 h5.product-name a:hover, 
 p.product-name a:hover{text-decoration: underline;}
+
+.col2-left-layout .col-main{
+	background-color: white;
+	padding: 10px;
+}
+
+.toolbar-bottom .toolbar{margin-bottom: 0px;}

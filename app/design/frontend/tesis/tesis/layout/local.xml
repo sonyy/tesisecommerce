@@ -81,6 +81,9 @@
             <action method="addItem"><type>skin_css</type><name>css/jquery.jqzoom.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>            
             <action method="addItem"><type>skin_js</type><name>js/jquery.jqzoom-core.js</name></action>
 		</reference>
+		<reference name="left">
+		     <block type="page/html_topmenu" name="catalog.sidenav" template="page/html/homepage-category.phtml" before="cart_sidebar"/>
+		</reference>
 	</catalog_product_view>
 
     <checkout_cart_index>
@@ -104,19 +107,4 @@
             </reference>
         </reference>
     </customer_account>
-
-    <catalog_product_view>
-        <reference name="content">
-            <reference name="product.info">
-                <remove name="product.info.sharing"/>
-                <!--<block type="catalog/product_view_attributes" name="product.attributes" as="additional" template="catalog/product/view/info.phtml">-->
-                    <!--<action method="addToParentGroup"><group>detailed_info</group></action>-->
-                    <!--<action method="setTitle" translate="value"><value>Additional Information</value></action>-->
-                <!--</block>-->
-            </reference>
-        </reference>
-		<reference name="left">
-		     <block type="core/template" name="catalog.sidenav" template="page/html/menu-category.phtml" before="cart_sidebar"/>
-		</reference>
-	</catalog_product_view>
 </layout>
