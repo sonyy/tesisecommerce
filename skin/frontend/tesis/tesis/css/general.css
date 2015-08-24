@@ -11,7 +11,7 @@ body .saving{
 }
 .cms-index-index .products-grid .actions{display: block;}
 header, .main-container.col1-layout, .footer-container, .main-container{background-color: #008800;}
-.category-title h1, body.catalogsearch-result-index .page-title h1{color: white;}
+.category-title h1, body.catalogsearch-result-index .page-title h1{color: black;}
 .button:hover, 
 .cart-table .product-cart-actions .button:hover,
 #co-shipping-method-form .buttons-set .button:hover, 
