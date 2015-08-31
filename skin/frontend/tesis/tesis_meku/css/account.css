@@ -1,0 +1,9 @@
+.account-login,
+.account-create,
+.customer-account-forgotpassword .col-main,
+.customer-account .main{
+	margin: 20px;
+    margin-top: 0px;
+    padding: 20px;
+    background-color: white;
+}

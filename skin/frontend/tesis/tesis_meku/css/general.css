@@ -1,0 +1,54 @@
+body .page{background-color: #C8EEEE;}
+body .saving{
+	padding: 5px 20px 5px 20px;
+	border: 1px solid black;
+	position: fixed;
+	bottom: 1%;
+	right: 5%;
+}
+.clear{
+    clear:both;
+}
+.cms-index-index .products-grid .actions{display: block;}
+header, .main-container.col1-layout, .footer-container, .main-container,
+.header-language-background{
+	background-color: #FFFF00;
+}
+.main{
+	min-height: 280px;
+}
+
+.category-title h1, body.catalogsearch-result-index .page-title h1,
+.page-title h1, .page-title h2, .product-name h1, .product-name .h1,
+h2, .h2,
+body, button, input, select, table, textarea,
+form .form-instructions,
+.cms-page-view .std li, .cms-no-route .std li{color: black;}
+
+.button:hover, 
+.cart-table .product-cart-actions .button:hover,
+#co-shipping-method-form .buttons-set .button:hover, 
+.footer .button:hover{
+	background: rgba(0, 0, 238, 0.65);
+}
+
+.button, 
+.cart-table .product-cart-actions .button, 
+#co-shipping-method-form .buttons-set .button, 
+.footer .button{
+	background: #FF0000;
+}
+
+#header-nav {display: none;}
+.breadcrumbs li, .breadcrumbs strong, .breadcrumbs a,.breadcrumbs a:hover{
+	color: black;
+}
+
+.breadcrumbs{
+	margin-left:20px;
+}
+
+.main-container, .footer{max-width: 1024px;}
+
+
+.price-box .price, .price{color: black;}

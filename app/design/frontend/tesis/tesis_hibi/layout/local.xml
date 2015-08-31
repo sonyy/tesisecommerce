@@ -1,0 +1,153 @@
+<?xml version="1.0"?> <!--
+/**
+ * local.xml
+ *
+ * Local layout modifications for our local theme
+ *
+ * @category    design
+ * @package     my_theme_default
+ * @copyright   Copyright (coffee) 2013 Magento.
+ */
+-->
+<layout version="0.1.0">
+	<default> 
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/header.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_css</type><name>css/megamenu.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_css</type><name>css/owl.carousel.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_css</type><name>css/footer.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_css</type><name>css/general.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+			<action method="addItem"><type>skin_js</type><name>js/owl.carousel.js</name></action>
+		</reference>
+		<reference name="footer">
+			<action method="unsetChild"><name>cms_footer_links</name></action>
+			<action method="unsetChild"><name>footer_links</name></action>
+			<action method="unsetChild"><name>footer_links2</name></action>
+			<action method="unsetChild"><name>cms_footer_links_sm</name></action>
+			<action method="unsetChild"><name>newsletter</name></action>
+			<block type="cms/block" name="footer_tesis" after="-">
+				<action method="setBlockId"><block_id>footer_tesis</block_id></action>
+			</block>
+			<block type="cms/block" name="footer_tesis2" after="footer_tesis">
+				<action method="setBlockId"><block_id>footer_tesis2</block_id></action>
+			</block>
+			<block type="cms/block" name="footer_tesis3" after="footer_tesis2">
+				<action method="setBlockId"><block_id>footer_tesis3</block_id></action>
+			</block>
+		</reference>
+
+        <default>
+            <reference name="right">
+                <remove name="catalog.compare.sidebar"/>
+                <remove name="right.poll"/>
+            </reference>
+        </default>
+	</default>
+
+	<cms_page_view>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/cms.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>
+	</cms_page_view>
+
+	<cms_index_index>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/homepage.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>
+	</cms_index_index>
+
+    <catalogsearch_result_index>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+    </catalogsearch_result_index>
+    
+	<catalog_category_view>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+			<!-- Mark root page block that template is applied -->
+			<action method="setIsHandle"><applied>1</applied></action>
+		</reference>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/category.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>
+		<reference name="left">
+		     <block type="page/html_topmenu" name="catalog.sidenav" template="page/html/homepage-category.phtml" before="cart_sidebar"/>
+		</reference>
+	</catalog_category_view>
+
+	<catalog_product_view>	
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+			<!-- Mark root page block that template is applied -->
+			<action method="setIsHandle"><applied>1</applied></action>
+		</reference>	
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/pdp.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+            <action method="addItem"><type>skin_css</type><name>css/jquery.jqzoom.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>            
+            <action method="addItem"><type>skin_js</type><name>js/jquery.jqzoom-core.js</name></action>
+		</reference>
+		<reference name="left">
+		     <block type="page/html_topmenu" name="catalog.sidenav" template="page/html/homepage-category.phtml" before="cart_sidebar"/>
+		</reference>
+	</catalog_product_view>
+
+    <checkout_cart_index>
+        <reference name="checkout.cart">
+            <remove name="checkout.cart.coupon"/>
+            <remove name="checkout.cart.shipping"/>
+            <reference name="checkout.cart.methods">
+                <remove name="checkout.cart.methods.multishipping"/>
+            </reference>
+        </reference>
+    </checkout_cart_index>
+
+    <customer_account>
+        <reference name="left">
+            <remove name="catalog.compare.sidebar"/>
+            <remove name="sale.reorder.sidebar"/>
+        </reference>
+        <reference name="my.account.wrapper">
+            <reference name="customer_account_dashboard">
+                <remove name="customer_account_dashboard_hello"/>
+            </reference>
+        </reference>
+    </customer_account>
+
+    <customer_account_login>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/account.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>    	
+    </customer_account_login> 
+
+    <customer_account_create> 
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/account.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>    	
+    </customer_account_create> 	
+
+	<customer_account>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/account.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>    	
+	</customer_account>
+
+	<customer_account_forgotpassword>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/account.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>    	
+	</customer_account_forgotpassword>
+
+	<checkout_cart_index>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/cart.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>    	
+	</checkout_cart_index>
+
+	<checkout_onepage_index>
+		<reference name="head">
+			<action method="addItem"><type>skin_css</type><name>css/cart.css</name><params/><if><![CDATA[<!--[lt IE 7 | (IEMobile)]><!-->]]></if></action>
+		</reference>    	
+	</checkout_onepage_index>
+
+</layout>
