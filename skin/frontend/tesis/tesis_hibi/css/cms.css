@@ -1,0 +1,31 @@
+/* cms.css */
+
+.cms-page-view .std li, 
+.cms-no-route .std li { font-family: Arial, Helvetica, sans-serif;}
+body, .cms-page-view .std p, .cms-no-route .std p, 
+.cms-page-view .std li, .cms-no-route .std li { color: #000000;}
+body:not(.customer-account) .block:first-child .block-title, 
+.block-cms-menu .block-title, 
+.page-title, 
+.cms-main .cms-title {
+	border: 1px solid #e3e3e3;
+	padding: 10px 20px;
+	/*margin-bottom: 2px;*/
+}
+.block-cms-menu .block-title strong, 
+.page-title h1, 
+.cms-page-view .std h1, 
+.cms-main .cms-title h1 {
+	border-bottom: 0;
+	text-transform: none;
+	color: black;
+	font-size: 20px;
+	margin-bottom: 0;
+}
+
+.cms-page-view .col-main{
+    margin: 20px;
+    margin-top: 0px;
+    padding: 20px;
+    background-color: white;
+}

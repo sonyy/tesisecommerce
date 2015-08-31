@@ -1,0 +1,121 @@
+.not-log-in#header-account,
+.header-language-container .welcome-msg{display: none;}
+.header-language-background{
+	padding:20px;
+	padding-bottom: 0px;
+    padding-top: 10px;
+}
+.skip-links{
+	display: inline-block;
+	background-color: transparent;
+	height: auto;
+	width: 819px;
+	padding: 10px;
+	overflow: visible;
+}
+#header-nav #nav h4{margin-bottom: 0px;}
+
+.nav-primary{margin-top: 10px;}
+.main-container, .footer-container{padding:0px;}
+.nav-primary li.level0, .nav-primary a.level0{
+	display: block;
+	position: initial;
+}
+.std ul li{margin-left: 0px;}
+
+.homepage-nav-primary li.level0 {
+	position: relative;
+	  list-style: none;
+}
+.logo{
+	min-height: 20px;
+	padding: 0px;
+	width: 18%;
+	margin-left: 20px;
+	margin-top: 10px
+}
+.logo .logo-img{width: 100%;}
+.page-header{
+	max-width: 1024px;
+	padding: 0px;
+}
+.page-header-container{
+	min-height: 79px;
+}
+.nav-primary a.level0{padding-left: 0px;}
+
+
+.account-wrapper{  
+	float: right;
+	position: relative;
+	top: 6px;
+	right: 10px;
+}
+#header-search{
+	position: relative;
+	top: 5px;
+	float: left;
+	left: 9px;
+	  width: 35%;
+}
+#search{border-radius: 13px;}
+#search_mini_form .search-button{border-left: 1px solid rgb(189, 189, 189);}
+
+
+#header-cart.skip-active{  top: 40px;}
+.cart-wrapper{
+	float: right;
+	position: relative;
+	top: 6px;
+	left: 11px;
+}
+.skip-link{  
+	height: 38px;
+	background-color: transparent;
+	color:white;
+}
+.skip-link.skip-cart .label{
+	float: left;
+	display: inline-block;
+	text-transform:none;
+	color: white;
+}
+.skip-cart{width: 150px}
+.skip-cart .icon{  
+	float: left;
+	position: relative;
+	top: 5px;
+	background-image: url(../images/shoping_cart.png);
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	background-size: 30px 30px;
+	background-position: 0;
+}
+.skip-cart:not(.skip-active):hover .icon,
+.skip-bantuan:hover .icon{
+	background-position: 0;
+	opacity: 0.6;
+}
+
+.skip-bantuan{
+	float: left;
+	position: relative;
+	height: 38px;
+	top: 6px;
+	left: 37px;
+	width: 150px;
+}
+.skip-bantuan .icon{	
+	background-image: url(../images/bantuan.png);
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	background-size: 30px 30px;
+	background-position: 0;
+}
+
+a.skip-link.skip-account{
+    position: relative;
+    top: 6px;
+    text-transform: none;
+    float: right;
+}

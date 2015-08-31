@@ -1,0 +1,26 @@
+<?php
+/**
+* Homepage Category
+*
+* Description:
+* - Create new template for category homepage, called via CMS block
+*  
+**/
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see Mage_Page_Block_Html_Topmenu
+ */
+?>
+<?php $_menu = $this->getHtml('level-top') ?>
+
+<?php if($_menu): ?>
+    <nav id="nav">
+    	<h4><span>Kategori Belanja</span></h4>
+        <ul class="homepage-nav-primary">
+            <?php echo $_menu ?>
+        </ul>
+    </nav>
+<?php endif ?>
