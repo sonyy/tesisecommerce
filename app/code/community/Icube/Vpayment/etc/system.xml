@@ -8,7 +8,7 @@
                     <sort_order>2</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
-                    <show_in_store>0</show_in_store>
+                    <show_in_store>1</show_in_store>
                     <fields>
                         <active translate="label">
                             <label>Enabled</label>
@@ -17,7 +17,7 @@
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </active>
                         <title translate="label">
                             <label>Title</label>
@@ -25,7 +25,7 @@
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </title>
                         <vt_mode translate="label">
                             <label>Mode</label>
@@ -34,7 +34,7 @@
                             <sort_order>2</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </vt_mode>
                         <vurl translate="label">
                             <label>Payment Gateway URL</label>
@@ -42,7 +42,7 @@
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </vurl>
                         <client translate="label">
                             <label>Client Key</label>
@@ -50,7 +50,7 @@
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </client>
                         <server translate="label">
                             <label>Server Key</label>
@@ -58,7 +58,7 @@
                             <sort_order>4</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </server>
                         <idprefix translate="label">
                             <label>VT ID Prefix</label>
@@ -66,7 +66,7 @@
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </idprefix>
                         <cctypes translate="label">
                             <label>Credit Card Types</label>
@@ -75,7 +75,7 @@
                             <sort_order>5</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                             <can_be_empty>1</can_be_empty>
                         </cctypes>
                         <order_status translate="label">
@@ -85,7 +85,7 @@
                             <sort_order>6</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </order_status>
                         <sort_order translate="label">
                             <label>Sort Order</label>
@@ -93,7 +93,7 @@
                               <sort_order>90</sort_order>
                               <show_in_default>1</show_in_default>
                               <show_in_website>1</show_in_website>
-                              <show_in_store>0</show_in_store>
+                              <show_in_store>1</show_in_store>
                         </sort_order>
                         <authorize_only translate="label">
                             <label>Authorize Only</label>
@@ -102,7 +102,7 @@
                             <sort_order>91</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </authorize_only>
                         <authorize_url translate="label">
                             <label>Payment Gateway Authorize URL</label>
@@ -110,7 +110,7 @@
                             <sort_order>92</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </authorize_url>
                         <cancel_url translate="label">
                             <label>Cancel Transaction URL</label>
@@ -118,7 +118,7 @@
                             <sort_order>93</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </cancel_url>
                         <secure_enable translate="label">
                             <label>3D Secure Enabled</label>
@@ -127,7 +127,7 @@
                             <sort_order>94</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
+                            <show_in_store>1</show_in_store>
                         </secure_enable>
                         <!--<secure_bank translate="label">-->
                             <!--<label>3D Secure Acquiring bank</label>-->
@@ -135,7 +135,7 @@
                             <!--<sort_order>95</sort_order>-->
                             <!--<show_in_default>1</show_in_default>-->
                             <!--<show_in_website>1</show_in_website>-->
-                            <!--<show_in_store>0</show_in_store>-->
+                            <!--<show_in_store>1</show_in_store>-->
                         <!--</secure_bank>-->
                     </fields>
                 </vpayment>
