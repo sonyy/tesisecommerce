@@ -63,7 +63,7 @@
     </div>
 </div>
 <?php echo $this->getAbsoluteFooter() ?>
-<a href=""><div class="saving">Saving</div></a>
+<a href="<?php echo Mage::helper('customer')->getLogoutUrl(); ?>" onclick="return confirm('Anda yakin?')"><div class="saving">Saving</div></a>
 </body>
 </html>
 
