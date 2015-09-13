@@ -74,7 +74,8 @@
             
                  <!-- Account -->
                 <a href="#header-account" id ="account-id" class="skip-link skip-account <?php if($this->helper('customer')->isLoggedIn()) : echo "log-in"; else : echo "not-log-in"; endif;?>">
-                <span class="label" id="login">
+                    <span class="icon"></span>
+                    <span class="label" id="login">
                 <?php if($this->helper('customer')->isLoggedIn()) : ?>
                         <?php echo $this->__('Hello, '); ?>
                         <span>
