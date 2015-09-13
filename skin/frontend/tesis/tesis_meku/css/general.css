@@ -1,10 +1,15 @@
 body .page{background-color: #C8EEEE;}
 body .saving{
-	padding: 5px 20px 5px 20px;
-	border: 1px solid black;
-	position: fixed;
-	bottom: 1%;
-	right: 5%;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid black;
+    position: fixed;
+    bottom: 1%;
+    right: 5%;
+    background-color: white;
+    color:black;
+}
+body .saving:hover{
+    background-color: #DADADA;
 }
 .clear{
     clear:both;
@@ -29,7 +34,7 @@ form .form-instructions,
 .cart-table .product-cart-actions .button:hover,
 #co-shipping-method-form .buttons-set .button:hover, 
 .footer .button:hover{
-	background: rgba(0, 0, 238, 0.65);
+	background: #FF6161;
 }
 
 .button, 
