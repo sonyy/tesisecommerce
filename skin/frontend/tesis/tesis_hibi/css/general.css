@@ -1,15 +1,20 @@
-body .page{background-color: #C8EEEE;}
+body .page{background-color: #0000EE;}
 body .saving{
-    padding: 5px 20px 5px 20px;
-    border: 1px solid black;
     position: fixed;
     bottom: 1%;
-    right: 5%;
-    background-color: white;
-    color:black;
+    right: 1%;
+    background: url(../images/1713.png) no-repeat right center;
+    width: 170px;
+    height: 170px;
+    background-position: 0 0;
+    background-size: 170px 170px;
 }
 body .saving:hover{
-    background-color: #DADADA;
+    background: url(../images/1713-2.png) no-repeat right center;
+    width: 170px;
+    height: 170px;
+    background-position: 0 0;
+    background-size: 170px 170px;
 }
 .clear{
     clear:both;
@@ -34,7 +39,7 @@ form .form-instructions,
 .cart-table .product-cart-actions .button:hover,
 #co-shipping-method-form .buttons-set .button:hover, 
 .footer .button:hover{
-	background: rgba(0, 0, 238, 0.65);
+	background: rgba(0, 0, 238, 0.69);
 }
 
 .button, 
@@ -43,10 +48,12 @@ form .form-instructions,
 .footer .button{
 	background: #0000EE;
 }
+
 #header-nav {display: none;}
 .breadcrumbs li, .breadcrumbs strong, .breadcrumbs a,.breadcrumbs a:hover{
-	color: white;
+	color: black;
 }
+
 .breadcrumbs{
 	margin-left:20px;
 }

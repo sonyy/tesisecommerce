@@ -66,8 +66,36 @@ body.cms-home .main-container { padding-top: 0;}
 	margin-top: 10px;
 	margin-bottom: 5px;
 }
-.homepage-top-left li { margin-bottom: 10px;}
-.homepage-top-left a  { color: black;}
+
+.homepage-top-left a,
+.homepage-top-left li.level1 a  { 
+	color: black;
+	font-weight: bold;
+}
+.homepage-top-left li{
+    padding-bottom: 6px;
+    padding-top: 5px;
+}
+.homepage-top-left li:hover,
+.homepage-nav-primary li.parent.level0:not(.first):hover  {
+ 	background-color: #FF0000;
+}
+.homepage-top-left li.level1:hover{
+	background-color: white;
+}
+.homepage-top-left li.level1:hover li a{
+	color:black;
+}
+.homepage-top-left li:hover a{
+	color: white;
+}
+
+.homepage-top-left li:hover li.level1 a{
+	color: black;
+}
+.homepage-top-left li:hover li.level1:hover a{
+	color: #FF0000;	
+}
 
 .homepage-brands-slider {
 	clear: both;
@@ -105,12 +133,10 @@ body.cms-home .main-container { padding-top: 0;}
 .homepage-top-left h4{
 	margin-top: 10px;
 	text-align: center;
-}
-.homepage-top-left h4 span{
-	background-color: #FFFF00;
+	background-color: #FF0000;
 	padding: 10px;
 	font-size: 12px;
-	color:black;
+	color:white;
 }
 .homepage-nav-primary li{list-style: none;}
 .homepage-nav-primary li.level0 {
@@ -118,7 +144,10 @@ body.cms-home .main-container { padding-top: 0;}
 	text-align: center;
 }
 .homepage-nav-primary li.parent.level0:not(.first):hover {
-	background: url(../images/arrow-homepage-megamenu.png) no-repeat right center;
+	background-color: #FF0000;
+	background-image: url(../images/arrow-homepage-megamenu.png) ;
+	background-repeat: no-repeat;
+	background-position: right;
 }
 
 .homepage-nav-primary li.level0:not(.first) ul.level0 {

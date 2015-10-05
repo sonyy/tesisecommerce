@@ -80,7 +80,7 @@
 }
 .nav-primary li.level1 a { border-bottom: 0;}
 .nav-primary li.level2 a { border-bottom: 1px solid #cccccc;}
-.nav-primary li.level0 > ul a:hover { color: #ff0000;}
+.nav-primary li.level0 > ul a:hover { color: #0000EE;}
 .megamenu-arrow {
 	display: none;
 	position: absolute;
