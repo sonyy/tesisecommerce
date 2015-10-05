@@ -56,11 +56,11 @@
 	top: 5px;
 	float: left;
 	left: 9px;
-	  width: 35%;
+	width: 65%;
 }
 #search{border-radius: 13px;}
 #search_mini_form .search-button{border-left: 1px solid rgb(189, 189, 189);}
-
+.header-language-background, .header-language-background a{color: black;}
 
 #header-cart.skip-active{  top: 40px;}
 .cart-wrapper{
@@ -72,13 +72,13 @@
 .skip-link{  
 	height: 38px;
 	background-color: transparent;
-	color:white;
+	color:black;
 }
 .skip-link.skip-cart .label{
 	float: left;
 	display: inline-block;
 	text-transform:none;
-	color: white;
+	color: black;
 }
 .skip-cart{width: 120px}
 .skip-cart .icon{  

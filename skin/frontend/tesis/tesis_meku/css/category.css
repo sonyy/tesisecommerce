@@ -11,22 +11,47 @@
 .col-left.sidebar h4{  
 	text-align: center;
   	padding-top: 5px;
-}
-.col-left.sidebar h4 span{  
-	background-color: #FFFF00;
+	background-color: #FF0000;
 	padding: 10px;
 	font-size: 12px;
-	color:black;
+	color:white;
 }
-.col-left.sidebar li{margin-bottom: 10px;}
+
+.col-left.sidebar li{
+	list-style: none;
+    padding-bottom: 6px;
+    padding-top: 5px;
+}
 .col-left.sidebar li.level0 {
 	position: relative;
 	text-align: center;
 }
-.col-left.sidebar li.parent.level0:not(.first):hover {
-	background: url(../images/arrow-homepage-megamenu.png) no-repeat right center;
+.col-left.sidebar li.parent.level0:not(.first):hover {	
+	background-color: #FF0000;
+	background-image: url(../images/arrow-homepage-megamenu.png) ;
+	background-repeat: no-repeat;
+	background-position: right;
 }
 
+.col-left.sidebar li:hover,
+.col-left.sidebar li.parent.level0:not(.first):hover  {
+ 	background-color: #FF0000;
+}
+.col-left.sidebar li.level1:hover{
+	background-color: white;
+}
+.col-left.sidebar li.level1:hover li a{
+	color:black;
+}
+.col-left.sidebar li:hover a{
+	color: white;
+}
+.col-left.sidebar li:hover li.level1 a{
+	color: black;
+}
+.col-left.sidebar li:hover li.level1:hover a{
+	color: #FF0000;	
+}
 .col-left.sidebar li.level0:not(.first) ul.level0 {
 	display: none;
 	position: absolute;
@@ -106,3 +131,4 @@ p.product-name a:hover{text-decoration: underline;}
 }
 
 .toolbar-bottom .toolbar{margin-bottom: 0px;}
+.add-to-links{display: none;}

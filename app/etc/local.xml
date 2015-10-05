@@ -28,10 +28,10 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Fri, 10 Jul 2015 01:14:35 +0000]]></date>
+            <date><![CDATA[Fri, 02 Oct 2015 08:12:05 +0000]]></date>
         </install>
         <crypt>
-            <key><![CDATA[bbcde7fafadec04ec5eb71dd72c5533d]]></key>
+            <key><![CDATA[a1d38b08e8815ae3ab833c3e44e882ea]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
@@ -43,7 +43,7 @@
                     <host><![CDATA[localhost]]></host>
                     <username><![CDATA[root]]></username>
                     <password><![CDATA[password]]></password>
-                    <dbname><![CDATA[tesisecommerce]]></dbname>
+                    <dbname><![CDATA[tesiscoba]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
