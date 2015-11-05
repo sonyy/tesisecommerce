@@ -1,4 +1,9 @@
 body .page{background-color: #FF0000;}
+body .header-language-background{display: none;}
+.cms-no-route .main{
+    max-width: 900px;
+    margin: 0 auto;
+}
 body .saving{
     position: fixed;
     bottom: 1%;
@@ -52,6 +57,7 @@ form .form-instructions,
 #header-nav {display: none;}
 .breadcrumbs li, .breadcrumbs strong, .breadcrumbs a,.breadcrumbs a:hover{
 	color: black;
+    font-weight: bold;
 }
 
 .breadcrumbs{

@@ -35,7 +35,7 @@
 	margin-right: 4px;
 }
 
-.footer-content li, .footer-content li a {color: white;}
+.footer-content li, .footer-content li a {color: black;}
 .footer-content li{font-weight: bold;}
 .footer-content li a{font-weight: normal;}
 .footer-container .footer-subscribe {
@@ -47,4 +47,4 @@
 	margin:20px;
 }
 
-.footer address{color: white;}
+.footer address{color: black;}
