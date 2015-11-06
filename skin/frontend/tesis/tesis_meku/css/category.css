@@ -89,7 +89,10 @@
 .col-left.sidebar li.level2 a {
 	font-weight: normal;
 }
-.col-left.sidebar li a{color: black;}
+.col-left.sidebar li a{
+	color: black;
+	font-weight: bold;
+}
 .col-left{
 	width: 18%;
 	background-color: white;
