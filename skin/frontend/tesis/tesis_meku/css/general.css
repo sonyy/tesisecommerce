@@ -1,7 +1,12 @@
 body .page{background-color: #FF0000;}
+body .header-language-background{display: none;}
+.cms-no-route .main{
+    max-width: 900px;
+    margin: 0 auto;
+}
 body .saving{
     position: fixed;
-    bottom: 1%;
+    bottom: 38%;
     right: 1%;
     background: url(../images/1713.png) no-repeat right center;
     width: 170px;
@@ -24,6 +29,8 @@ header, .main-container.col1-layout, .footer-container, .main-container,
 .header-language-background{
 	background-color: #FFFF00;
 }
+
+.col-main.col-main2{width: 100%;}
 .main{
 	min-height: 280px;
 }
@@ -52,6 +59,7 @@ form .form-instructions,
 #header-nav {display: none;}
 .breadcrumbs li, .breadcrumbs strong, .breadcrumbs a,.breadcrumbs a:hover{
 	color: black;
+    font-weight: bold;
 }
 
 .breadcrumbs{
@@ -59,6 +67,4 @@ form .form-instructions,
 }
 
 .main-container, .footer{max-width: 1024px;}
-
-
 .price-box .price, .price{color: black;}

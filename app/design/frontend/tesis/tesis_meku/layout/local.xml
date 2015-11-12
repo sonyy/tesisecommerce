@@ -162,7 +162,6 @@
 		<reference name="left">
 		     <block type="page/html_topmenu" name="catalog.sidenav" template="page/html/homepage-category.phtml" before="cart_sidebar"/>
 		</reference>
-
 	</catalogsearch_result_index>
 
 </layout>
